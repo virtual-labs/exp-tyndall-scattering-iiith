@@ -1,5 +1,3 @@
-
-
 Electromagnetic radiation and mater interactions can broadly be of following three categories: (i) scattering (ii) absorption and (iii) emission. Scattering is a physical process that involves deviation of electromagnetic radiation (e.g., light), sound, or moving particles from a straight trajectory due to the interaction with various units, or due to the presence of one or more localized non-uniformities, in the medium through which they pass. In the scattering of electromagnetic radiations, energy is removed from the beam of the electromagnetic radiation and re-emitted almost instantaneously with a change in direction, phase, and/or wavelength (Figure 2). Any portion of a material medium where refractive index shows discontinuity with respect to the surrounding medium (optically inhomogeneous), such as a particle, droplet, bubble, or even a density fluctuation, can scatter radiation. Therefore, scattering of electromagnetic radiation by any medium is a common phenomenon and the visible appearances of many objects are due to the light scattering. Pure liquid or true solutions which have ions or solute molecules of very small sizes appear optically homogeneous and therefore cannot scatter light.
 
 We know that the fields of electromagnetic radiation can accelerate charged particles and the accelerating charges radiate energy. When the electromagnetic wave interacts with a particle, the electron clouds within the particle's constituent atoms/molecules are driven periodically by the electric field of the incident wave. This oscillation of the electron cloud leads to a periodic separation of charge resulting in an induced dipole moment. The oscillating induced dipole moment reradiates energy in different directions or acts as a source of electromagnetic radiation. This re?distribution of the incident radiation energy gives rise to the light scattering. Most of the light scattered by the particle has the same wavelength as that of the incident light. Such scatterings are called as 'elastic' scatterings, e.g., Tyndall scattering, Rayleigh scattering and Mie scattering, which involve negligible energy transfer and therefore no wavelength change. On the other hand, Raman scattering, Brillouin scattering, and Compton scattering occur with energy transfer and are therefore examples of 'inelastic' scatterings.
@@ -20,13 +18,13 @@ Tyndall effect is not used to determine the concentration of a sol, though for a
 
 It should be remembered that in the previous discussion of scattering it is assumed that the particles are insulating and non-absorbing. However, many particles (e.g., metal particles) are strong absorbers of light. As the amount of absorbed light is roughly proportional to V/λ (as compared to the V2/λ4 dependence of the amount of scattered light), the light absorption may dominate (if energy gap matches) over scattering when the volume of the particles becomes smaller.
 
- <center><img src="images/schematics.jpg">  </center>
+ <center><img src="images/schematics.jpg" width="450" height="300">  </center>
 
 Schematics of scattering of incident light off a particle in solution
 
 Figure 2: Schematics of scattering of incident light off a particle in solution.
 
- <center><img src="images/schematics_2.jpg">  </center>
+ <center><img src="images/schematics_2.jpg" width="450" height="300">  </center>
 
 Schematic illustration
 
