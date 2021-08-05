@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following solutions will be transparent to a bright source of light?",
+      "answers": {
+        "a": "soil and water",
+        "b": "sugar solution",
+        "c": "milk",
+        "d": "corn starch"
+      },
+      "explanations": {
+        "a": "soil and water will not be transparent to light and will show a tyndall effect.",
+        "b": "sugar solution will be transparent to light and will not show a tyndall effect.",
+        "c": "milk will not let light pass at all. ",
+        "d": "corn starch will also not show a tyndall effect."
+      },
+      "difficulty": "beginner",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "2. What is the one property of a suspension that is different from a solution or a colloid?",
+      "answers": {
+        "a": "If left to rest,the particles of a suspension will settle down.",
+        "b": "The particles of a suspension reflect light.",
+        "c": "A suspension is always clear.",
+        "d": "Suspensions are colourless."
+      },
+      "explanations": {
+        "a": "particles of suspension settle down if left to rest.",
+        "b": "both suspension and colloid show tyndall effect.",
+        "c": "suspension is never clear while solution is.",
+        "d": "suspension may or may not be colorless."
+      },
+      "difficulty": "intermediate",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "3. What happens if one stirs vigorously to dissolve soap powder in water?",
+      "answers": {
+        "a": "more soap powder can now be added to the mixture.",
+        "b": "the foam starts forming and floats above the water surface.",
+        "c": "bubbles start popping in the water.",
+        "d": "the soap powder and water separate out."
+      },
+      "explanations": {
+        "a": "soap powder forms lather when stirred in water. This does not allow more soap to be added.",
+        "b": "soap solution starts forming lather and floats above the water surface.",
+        "c": "bubbles will start forming but they won't pop out due to stirring.",
+        "d": "stirring cannot separate the contents of the soap solution."
+      },
+      "difficulty": "intermediate",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "4. When a white light beam is passed through a glass cube containing small dispersed particles, the cube appears either bluish or reddish when viewed from different directions. Why?",
+      "answers": {
+        "a": "the cube has manufacturing defects.",
+        "b": "the dispersed particles scatter light in different wavelengths from different angles.",
+        "c": "The cube absorbs all other colors from incoming radiations.",
+        "d": "the particles emit bluish or reddish light."
+      },
+      "explanations": {
+        "a": "the manufacturing defects cannot produce this kind of effect.",
+        "b": "the wavelength of light scattered due to the tyndall effect depends on angle, polarisations and other factors.",
+        "c": "the cube or the particles show color due to scattering and not absorption.",
+        "d": "the particles do not emit light but scatter it."
+      },
+      "difficulty": "advanced",
+      "correctAnswer": "b"
+    }
+  ]
+}
