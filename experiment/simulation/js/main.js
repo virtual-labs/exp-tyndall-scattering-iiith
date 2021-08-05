@@ -198,7 +198,7 @@ let sleep = (ms) => {
 };
 
 async function shineLight() {
-  if (overallIteration == 1) {
+  if (overallIteration === 1) {
     for (let i = 0; i < 2; i++) {
       let finalPosition = 1;
       let curPosition = 0;
