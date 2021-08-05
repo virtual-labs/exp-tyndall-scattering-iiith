@@ -7,7 +7,7 @@
         "a": "Tyndall and Rayleigh",
         "b": "Tyndall and Raman",
         "c": "Tyndall and Brillouin",
-        "d": "none of these"
+        "d": "None of these"
       },
       "explanations": {
         "a": "Tyndall scattering is an elastic scattering and does not absorb any energy from the incident radiation. Rayleigh scattering absorbs negligible energy from the incident radiation.",
