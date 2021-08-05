@@ -1,1 +1,1 @@
-### Procedure
+Once all the apparatus has been introduced into the workspace, click on the Light Source, i.e., Torch, to shine a ray of light on all the beakers placed in a row. Observe the path of light closely as it goes through all the beakers.
