@@ -2,9 +2,22 @@
 let overallIteration = -3;
 let divWidth;
 let black = "#121516";
-let solution_colors = ["#9fb2b7", "#b3c3c8", "#9ab2b9"];
-let colloid_color = "#e9ebf0";
-let suspension_colors = ["#c2c9cb", "#d5dcdf", "#ebeeff"];
+let solution_colors = ["#9fb2b7", "#b3c3c8"];
+let colloid_color = "#646869";
+let suspension_color = "#878d86";
+
+const apparatusOptions = [
+  "option-light",
+  "option-solution",
+  "option-colloid",
+  "option-suspension",
+];
+
+apparatusOptions.forEach(function (option) {
+  document.getElementById(option).style.pointerEvents = "none";
+});
+
+document.getElementById("option-light").style.pointerEvents = "auto";
 
 let light_comps = [
   "light-after-solution",
@@ -14,12 +27,7 @@ let light_comps = [
   "light-after-suspension",
 ];
 
-let torch_comps = [
-  "torch-mouth",
-  "light-torch-head",
-  "light-torch-mouth",
-  "light-after-torch",
-];
+let torch_comps = ["torch-mouth", "light-after-torch"];
 
 function removeLight() {
   let i;
@@ -37,20 +45,13 @@ function removeApparatus() {
   const ids = [
     "solution-beaker",
     "solution-top",
-    "solution-middle",
     "solution-bottom",
-    "solution-bottom-reflection",
-    "colloid-beaker-top",
-    "colloid-beaker-bottom",
+    "colloid-beaker",
     "colloid-top",
     "colloid-bottom",
-    "suspension-beaker-top",
-    "suspension-beaker-bottom",
-    "suspension-beaker-right",
+    "suspension-beaker",
     "suspension-top",
-    "suspension-top2",
     "suspension-bottom",
-    "suspension-bottom-reflection",
   ];
 
   let i;
@@ -67,36 +68,34 @@ function removeApparatus() {
 
 function removeLabels() {
   const labels = [
-    "S-solution",
+    "s-solution",
     "o1-solution",
     "l-solution",
-    "ut-solution",
+    "u-solution",
+    "t-solution",
     "i-solution",
     "dot-solution",
     "o2-solution",
     "n-solution",
-    "C-colloid",
+    "c-colloid",
     "o1-colloid",
     "l1-colloid",
     "l2-colloid",
-    "o2-colloid-top",
-    "o2-colloid-middle",
-    "o2-colloid-bottom",
+    "o2-colloid",
     "i-colloid",
     "dot-colloid",
     "d-colloid",
-    "S-suspension",
-    "u-suspension",
     "s1-suspension",
+    "u-suspension",
+    "s2-suspension",
     "p-suspension",
     "e-suspension",
-    "n-suspension",
-    "s2-suspension",
-    "i-suspension-top",
-    "i-suspension-bottom",
+    "n1-suspension",
+    "s3-suspension",
+    "i-suspension",
     "dot-suspension",
     "o-suspension",
-    "n1-suspension",
+    "n2-suspension",
   ];
 
   let i;
@@ -116,10 +115,11 @@ function displayLabels(labels) {
 
 function displaySolution() {
   const labels = [
-    "S-solution",
+    "s-solution",
     "o1-solution",
     "l-solution",
-    "ut-solution",
+    "u-solution",
+    "t-solution",
     "i-solution",
     "dot-solution",
     "o2-solution",
@@ -130,21 +130,16 @@ function displaySolution() {
 
   document.getElementById("solution-beaker").style.fill = black;
   document.getElementById("solution-top").style.fill = solution_colors[0];
-  document.getElementById("solution-middle").style.fill = solution_colors[1];
   document.getElementById("solution-bottom").style.fill = solution_colors[1];
-  document.getElementById("solution-bottom-reflection").style.fill =
-    solution_colors[2];
 }
 
 function displayColloid() {
   const labels = [
-    "C-colloid",
+    "c-colloid",
     "o1-colloid",
     "l1-colloid",
     "l2-colloid",
-    "o2-colloid-top",
-    "o2-colloid-middle",
-    "o2-colloid-bottom",
+    "o2-colloid",
     "i-colloid",
     "dot-colloid",
     "d-colloid",
@@ -152,8 +147,7 @@ function displayColloid() {
 
   displayLabels(labels);
 
-  document.getElementById("colloid-beaker-top").style.fill = black;
-  document.getElementById("colloid-beaker-bottom").style.fill = black;
+  document.getElementById("colloid-beaker").style.fill = black;
   document.getElementById("colloid-top").style.fill = colloid_color;
   document.getElementById("colloid-bottom").style.fill = colloid_color;
   document.getElementById("colloid-light-stopcolor").style.stopColor =
@@ -162,33 +156,26 @@ function displayColloid() {
 
 function displaySuspension() {
   const labels = [
-    "S-suspension",
-    "u-suspension",
     "s1-suspension",
+    "u-suspension",
+    "s2-suspension",
     "p-suspension",
     "e-suspension",
-    "n-suspension",
-    "s2-suspension",
-    "i-suspension-top",
-    "i-suspension-bottom",
+    "n1-suspension",
+    "s3-suspension",
+    "i-suspension",
     "dot-suspension",
     "o-suspension",
-    "n1-suspension",
+    "n2-suspension",
   ];
 
   displayLabels(labels);
 
-  document.getElementById("suspension-beaker-top").style.fill = black;
-  document.getElementById("suspension-beaker-bottom").style.fill = black;
-  document.getElementById("suspension-beaker-right").style.fill = black;
-  document.getElementById("suspension-top").style.fill = suspension_colors[0];
-  document.getElementById("suspension-top2").style.fill = suspension_colors[1];
-  document.getElementById("suspension-bottom").style.fill =
-    suspension_colors[1];
-  document.getElementById("suspension-bottom-reflection").style.fill =
-    suspension_colors[2];
+  document.getElementById("suspension-beaker").style.fill = black;
+  document.getElementById("suspension-top").style.fill = suspension_color;
+  document.getElementById("suspension-bottom").style.fill = suspension_color;
   document.getElementById("suspension-light-stopcolor").style.stopColor =
-    suspension_colors[1];
+    suspension_color;
 
   document.getElementById("light-torch").style.cursor = "pointer";
 }
@@ -212,28 +199,16 @@ async function shineLight() {
       }
     }
 
-    let finalPosition = 1;
-    let curPosition = 0;
-    while (true) {
-      if (curPosition > finalPosition) break;
-      curPosition += 0.01;
-      document
-        .getElementById(torch_comps[2])
-        .setAttribute("offset", curPosition);
-      document
-        .getElementById(torch_comps[3])
-        .setAttribute("offset", curPosition);
-      await sleep(0.5);
-    }
-
     lightAnimation();
     overallIteration++;
     observeMessage();
 
     if (!restartAnimation) {
       setTimeout(function () {
+        //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
         document.getElementById("instruction").innerHTML =
           "Click on Restart option in the Control Menu to restart the experiment from scratch.";
+        //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
         document.getElementById("observation").innerHTML =
           "Click on Restart option in the Control Menu to restart the experiment from scratch.";
       }, 40000);
@@ -259,34 +234,45 @@ async function lightAnimation() {
 let setupMessages = [
   "Click on the Light Source option in the Apparatus Menu to introduce a light source such as a Torch into the workspace.",
   "Click on the Solution option in the Apparatus Menu to introduce a solution (ex: Water) into the workspace.",
-  "Click on the Colloid option in the Apparatus Menu to introduce a colloidal solution (ex: Milk) into the workspace.",
-  "Click on the Suspension option in the Apparatus Menu to introduce a suspension (ex: Mixture of Flour and Water) into the workspace.",
+  "Click on the Colloid option in the Apparatus Menu to introduce a colloidal solution (ex: Brewed Coffee) into the workspace.",
+  "Click on the Suspension option in the Apparatus Menu to introduce a suspension (ex: Muddy Water) into the workspace.",
 ];
 
 let setup = 0;
 
 function setupMessage() {
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
   document.getElementById("instruction").innerHTML = setupMessages[setup];
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
   document.getElementById("observation").innerHTML = setupMessages[setup];
   setup++;
+}
+
+function apparatusSetup(oldOption, newOption) {
+  document.getElementById(oldOption).style.pointerEvents = "none";
+  document.getElementById(newOption).style.pointerEvents = "auto";
 }
 
 setupMessage();
 async function visibility(x) {
   if (x === 1 && overallIteration === -3) {
     document.getElementById("torch-row").style.visibility = "visible";
+    apparatusSetup("option-light", "option-solution");
     overallIteration++;
     setupMessage();
   } else if (x === 2 && overallIteration === -2) {
     displaySolution();
+    apparatusSetup("option-solution", "option-colloid");
     overallIteration++;
     setupMessage();
   } else if (x === 3 && overallIteration === -1) {
     displayColloid();
+    apparatusSetup("option-colloid", "option-suspension");
     overallIteration++;
     setupMessage();
   } else if (x === 4 && overallIteration === 0) {
     displaySuspension();
+    apparatusSetup("option-suspension", "restart");
     overallIteration++;
     changeMessage();
   }
@@ -298,7 +284,9 @@ let instructionMessages = [
 let iter1 = -1;
 function changeMessage() {
   iter1++;
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
   document.getElementById("instruction").innerHTML = instructionMessages[iter1];
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
   document.getElementById("observation").innerHTML = instructionMessages[iter1];
 }
 
@@ -310,10 +298,13 @@ let observationMessages = [
 function observeMessage() {
   iter2++;
 
+  //"head-instructions" is the Heading of the Instructions HTML element that will be visible only in wide screens, i.e., width greater than 768px
   document.getElementById("head-instructions").innerHTML = "Observations";
+  //"head-observations" is the Heading of the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
   document.getElementById("head-observations").innerHTML = "Observations";
-
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
   document.getElementById("instruction").innerHTML = observationMessages[iter2];
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
   document.getElementById("observation").innerHTML = observationMessages[iter2];
 }
 
@@ -330,10 +321,20 @@ document.getElementById("simulation").style.minHeight =
 let restartAnimation = false;
 
 async function restart() {
+  apparatusOptions.forEach(function (option) {
+    document.getElementById(option).style.pointerEvents = "none";
+  });
+  document.getElementById("option-light").style.pointerEvents = "auto";
+
   document.getElementById("simulation").style.height = originalSimulationHeight;
+
+  //"head-instructions" is the Heading of the Instructions HTML element that will be visible only in wide screens, i.e., width greater than 768px
   document.getElementById("head-instructions").innerHTML = "Instructions";
+  //"head-observations" is the Heading of the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
   document.getElementById("head-observations").innerHTML = "Instructions";
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
   document.getElementById("instruction").innerHTML = "";
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
   document.getElementById("observation").innerHTML = "";
 
   overallIteration = -3;
