@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In which of the following scattering(s), the incident and scattered light has the same wavelength?",
+      "answers": {
+        "a": "Tyndall and Rayleigh",
+        "b": "Tyndall and Raman",
+        "c": "Tyndall and Brillouin",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Tyndall scattering is an elastic scattering and does not absorb any energy from the incident radiation. Rayleigh scattering absorbs negligible energy from the incident radiation.",
+        "b": "Raman scattering can absorb or emit energy into the incident radiation.",
+        "c": "Brillouin scattering absorbs energy from incoming radiation.",
+        "d": ""
+      },
+      "difficulty": "intermediate",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "2. Particles showing tyndall effect has diameter compared to wavelength on incident radiation (ƛ):",
+      "answers": {
+        "a": "less than ƛ/10",
+        "b": "greater than ƛ/10",
+        "c": "smaller than ƛ",
+        "d": "greater than ƛ"
+      },
+      "explanations": {
+        "a": "particles having diameter smaller than ƛ/10 show rayleigh scattering",
+        "b": "particles having diameter greater than ƛ/10 show Mei scattering",
+        "c": "particles having diameter smaller than ƛ also show Mei scattering",
+        "d": "particles having diameter greater than ƛ show tyndall scattering"
+      },
+      "difficulty": "intermediate",
+      "correctAnswer": "d"
+    },
+    {
+      "question": "3. Why does violet color scatter more than red color in the sky?",
+      "answers": {
+        "a": "Violet color is abundant in the incoming radiation from sun",
+        "b": "Air molecules like N<sub>2</sub>, O<sub>2</sub> have diameter which are of the order ƛ/10 or less and they scatter violet more than red.",
+        "c": "violet color is refracted more by the atmospheric layers.",
+        "d": "red color is absorbed by the air molecules."
+      },
+      "explanations": {
+        "a": "all range of frequency is present in the incoming radiation in the same amount.",
+        "b": "the intensity of scattered light varies as V2/λ4  (i.e., proportional to the square of particle volume, V, or to the sixth power of diameter, and inversely as the fourth power of wavelength, λ). Therefore, for a given particle size, violet light is scattered about eight to ten times more than red light.",
+        "c": "refraction does not play an important role in the higher intensity of violet color",
+        "d": "red color is not absorbed by air molecules."
+      },
+      "difficulty": "intermediate",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "4. Why do metal particles do not show scattering generally?",
+      "answers": {
+        "a": "metal particles absorb more and scatter less.",
+        "b": "metal particles are smaller than  λ/10.",
+        "c": "metal particles are non scatterers.",
+        "d": "metal particles are insulators."
+      },
+      "explanations": {
+        "a": "metal particles absorb more and scatter less, due to which absorption dominates over scattering when particle size is small.",
+        "b": "metal particles are comparable to N<sub>2</sub> and O<sub>2</sub> and should show the same effect as them if they are insulating and non absorbing",
+        "c": "metal particles like other particles scatter too, but their absorption dominates over scattering.",
+        "d": "metal particles are insulators."
+      },
+      "difficulty": "advanced",
+      "correctAnswer": "a"
+    }
+  ]
+}
