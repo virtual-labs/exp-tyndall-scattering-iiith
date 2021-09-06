@@ -8,6 +8,4 @@ Tyndall Effect
 Figure 1. Demonstration Tyndall effect. A laser pointer has been used as light source. The left glass contains 5 ppm of colloidal silver and the right one tap water. The path of the light beam can be clearly seen in the left glass. (Courtesy:http://silver-lightning.com/tyndall/tyndall3.jpg)  
 
 
-To familiarise with some basic concepts related to light scattering and the Tyndall effect - the light scattering phenomenon in colloidal system.
-
 
