@@ -1,0 +1,1 @@
+- To familiarise with some basic concepts related to light scattering and the Tyndall effect - the light scattering phenomenon in colloidal system.
